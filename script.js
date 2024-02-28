@@ -19,7 +19,7 @@ function getTeamsInConference(conference){
 }
 console.log (getTeamsInConference("eastern")) ;
 
-
+//the next function:
 
 
 
