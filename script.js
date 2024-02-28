@@ -20,6 +20,26 @@ function getTeamsInConference(conference){
 console.log (getTeamsInConference("eastern")) ;
 
 //the next function:
+function getOldestTeam(conference){
+    var oldest = 3000;
+    var matches = "that division doesn't exist";
+    for (var i = 0; i < joined.length; i++) {
+        if((conference[i].toLowerCase()== conference.toLowerCase() && joined [i] <= oldest)){
+            matches = teamName[i];
+            oldest = joined[i];
+        }
+        if (oldestteamName== ""){
+            oldestteamName=" that divison doesn't exist"
+        }
+    }
+   return matches;
+    
+
+}
+ console.log (getOldestTeam("Eastern"));
+
+
+
 
 
 
