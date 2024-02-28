@@ -5,7 +5,8 @@ var teamLocation= getColumn (url,2)
 var teamStadium = getColumn (url,3)
 var stadiumCapacity = getColumn (url,4)
 var teamConference =getColumn (url,7)
-console.log(teamConference)
+console.log("stadiumCapacity");
+
 function getTeamsInConference(conference){
     var matches= ["this conference doesn't exist"];
     for (var i = 0; i < teamConference.length; i++) {
@@ -17,3 +18,46 @@ function getTeamsInConference(conference){
    return matches;
 }
 console.log (getTeamsInConference("eastern")) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function getstadiumCapacity(conference){
+    var total = 0;
+    for(var i = 0; i <stadiumCapacity.length; i++){
+        if(teamConference[i].toLowerCase() == conference.toLowerCase()){
+            total += stadiumCapacity[i];
+        }
+    }
+    if(total == 0){
+      return -1;
+    }
+    return total; 
+  }
+  console.log(getstadiumCapacity("Eastern"));   
