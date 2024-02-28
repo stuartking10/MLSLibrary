@@ -4,3 +4,5 @@ var teamLocation= getColumn (url,2)
 var teamStadium = getColumn (url,3)
 var stadiumCapacity = getColumn (url,4)
 var teamConference =getColumn (url,7)
+
+console.log "hi"
