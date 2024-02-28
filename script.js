@@ -17,6 +17,19 @@ function getTeamsInConference(conference){
     }
    return matches;
 }
+
+function getCity(team) {
+    var matches ="that team doesn't exist";
+    for (var i = 0; i < teamName.length; i++) {
+        if(teamName[i].toLowerCase().includes(team.toLowerCase())){
+            matches = teamLocation[i];
+        }
+
+    }
+   return matches;
+    
+}
+// console.log (getCity("charlotte FC"))
 console.log (getTeamsInConference("eastern")) ;
 
 //the next function:
