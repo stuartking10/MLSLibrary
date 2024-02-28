@@ -54,7 +54,18 @@ function getOldestTeam(conference){
 
 
 
+  function getHeadCoach(team){
+    var match = "That team does not exist";
+    for(var i = 0; i < coachName.length; i++){
+        if(teamName[i].toLowerCase().includes(team.toLowerCase())){
+        match = coachName[i];
 
+    }
+
+  } 
+  return match;
+  }
+  console.log (getHeadCoach("Atlanta"));
 
 
 
