@@ -69,6 +69,22 @@ function getOldestTeam(conference){
 
 
 
+function getOldestTeam(conference){
+    var oldest = 3000;
+    var matches = "that division doesn't exist";
+    for (var i = 0; i < joined.length; i++) {
+        if((teamConference[i].toLowerCase()== conference.toLowerCase() && joined [i] <= oldest)){
+            matches = teamName[i];
+            oldest = joined[i];
+        }
+        
+    }
+    
+   return matches;
+    
+
+}
+ console.log (getOldestTeam("Eastern"));
 
 
 
