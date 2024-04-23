@@ -17,74 +17,35 @@ function getTeamsInConference(conference){
     }
    return matches;
 }
-
-function getCity(team) {
-    var matches ="that team doesn't exist";
-    for (var i = 0; i < teamName.length; i++) {
-        if(teamName[i].toLowerCase().includes(team.toLowerCase())){
-            matches = teamLocation[i];
-        }
-
-    }
-   return matches;
-    
-}
-// console.log (getCity("charlotte FC"))
 console.log (getTeamsInConference("eastern")) ;
 
-//the next function:
-function getOldestTeam(conference){
-    var oldest = 3000;
-    var matches = "that division doesn't exist";
-    for (var i = 0; i < joined.length; i++) {
-        if((conference[i].toLowerCase()== conference.toLowerCase() && joined [i] <= oldest)){
-            matches = teamName[i];
-            oldest = joined[i];
-        }
-        if (oldestteamName== ""){
-            oldestteamName=" that divison doesn't exist"
-        }
-    }
-   return matches;
-    
-
-}
- console.log (getOldestTeam("Eastern"));
 
 
 
 
-  function getHeadCoach(team){
-    var match = "That team does not exist";
-    for(var i = 0; i < coachName.length; i++){
-        if(teamName[i].toLowerCase().includes(team.toLowerCase())){
-        match = coachName[i];
-
-    }
-
-  } 
-  return match;
-  }
-  console.log (getHeadCoach("Atlanta"));
 
 
 
-function getOldestTeam(conference){
-    var oldest = 3000;
-    var matches = "that division doesn't exist";
-    for (var i = 0; i < joined.length; i++) {
-        if((teamConference[i].toLowerCase()== conference.toLowerCase() && joined [i] <= oldest)){
-            matches = teamName[i];
-            oldest = joined[i];
-        }
-        
-    }
-    
-   return matches;
-    
 
-}
- console.log (getOldestTeam("Eastern"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function getstadiumCapacity(conference){
