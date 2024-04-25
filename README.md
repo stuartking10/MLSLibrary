@@ -23,5 +23,5 @@ this function uses the Conference to find the teams in the conference, the oldes
 #
 #### It takes the conference as a parameter and gives back all of the stadium capacity of the conference
 ###### Conference {string} - desired capacity of stadium's
-###### It will return all of the capacity of the stadium's {number} or "That conference doesn't exist"
+###### It will return all of the capacity of the stadium's {number} or -1
 **function getstadiumCapacity(conference)**
