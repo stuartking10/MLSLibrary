@@ -83,4 +83,4 @@ function getstadiumCapacity(conference){
     }
     return total; 
   }
-  console.log(getstadiumCapacity("Eastern"));   
+  console.log(getstadiumCapacity("eastern"));   
