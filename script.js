@@ -5,18 +5,23 @@ var teamLocation= getColumn (url,2)
 var teamStadium = getColumn (url,3)
 var stadiumCapacity = getColumn (url,4)
 var teamConference =getColumn (url,7)
-console.log("stadiumCapacity");
+var joined =getColumn (url,5)
+var coachName =getColumn (url,6)
 
 function getTeamsInConference(conference){
-    var matches= ["this conference doesn't exist"];
+    var matches= [];
     for (var i = 0; i < teamConference.length; i++) {
         if(teamConference[i].toLowerCase().includes(conference.toLowerCase())){
             matches.push(teamName[i]);
         }
-
+  
     }
-   return matches;
+    if (matches.length==0){
+        matches.push("this conference does not exist")
+    }
+   return matches; 
 }
+console.log(getTeamsInConference("western"))
 
 function getCity(team) {
     var matches ="that team doesn't exist";
@@ -29,12 +34,8 @@ function getCity(team) {
    return matches;
     
 }
-// console.log (getCity("charlotte FC"))
-<<<<<<< HEAD
-console.log (getTeamsInConference("eastern")) ;
-=======
-// console.log (getTeamsInConference("eastern")) ;
->>>>>>> fe95df67d708ef585c55b9b46437acd65d61968d
+console.log (getCity("charlotte FC")) 
+// console.log (getTeamsInConference("Eastern")) ;
 
 //the next function:
 function getOldestTeam(conference){
@@ -45,17 +46,16 @@ function getOldestTeam(conference){
             matches = teamName[i];
             oldest = joined[i];
         }
-        if (oldestteamName== ""){
-            oldestteamName=" that divison doesn't exist"
-        }
+       
+    }
+    if (oldestteamName== ""){
+        oldestteamName=" that divison doesn't exist"
     }
    return matches;
     
 
 }
-<<<<<<< HEAD
- console.log (getOldestTeam("Eastern"));
-
+ console.log(getOldestTeam("Eastern"))
 
 
 
@@ -70,7 +70,7 @@ function getOldestTeam(conference){
   } 
   return match;
   }
-  console.log (getHeadCoach("Atlanta"));
+  console.log (getHeadCoach("Atl")); 
 
 
 
@@ -102,25 +102,12 @@ function getOldestTeam(conference){
 
 
 
-=======
-//  console.log (getOldestTeam("Eastern"));
->>>>>>> fe95df67d708ef585c55b9b46437acd65d61968d
 
 
 
 
-  function getHeadCoach(team){
-    var match = "That team does not exist";
-    for(var i = 0; i < coachName.length; i++){
-        if(teamName[i].toLowerCase().includes(team.toLowerCase())){
-        match = coachName[i];
 
-    }
 
-  } 
-  return match;
-  }
-//   console.log (getHeadCoach("Atlanta"));
 
 
 
@@ -130,7 +117,7 @@ function getstadiumCapacity(conference){
     var total = 0;
     for(var i = 0; i <stadiumCapacity.length; i++){
         if(teamConference[i].toLowerCase() == conference.toLowerCase()){
-            total += stadiumCapacity[i];
+            total += parseFloat(stadiumCapacity[i]);
         }
     }
     if(total == 0){
@@ -138,4 +125,4 @@ function getstadiumCapacity(conference){
     }
     return total; 
   }
-  console.log(getstadiumCapacity("eastern"));   
+  console.log(getstadiumCapacity("Eastern"));   
