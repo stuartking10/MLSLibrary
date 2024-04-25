@@ -20,6 +20,7 @@ function getTeamsInConference(conference){
         matches.push("this conference does not exist")
     }
    return matches; 
+//    It takes the conference as a parameter and gives back the teams in the conference
 }
 console.log(getTeamsInConference("western"))
 
@@ -32,10 +33,10 @@ function getCity(team) {
 
     }
    return matches;
-    
+    // It takes the team as a parameter and gives back the city the team is from
 }
-console.log (getCity("charlotte FC")) 
-// console.log (getTeamsInConference("Eastern")) ;
+console.log (getCity("ash")) 
+ console.log (getTeamsInConference("Eastern")) ;
 
 //the next function:
 function getOldestTeam(conference){
@@ -52,7 +53,7 @@ function getOldestTeam(conference){
         oldestteamName=" that divison doesn't exist"
     }
    return matches;
-    
+    //  It takes the conference as a parameter and gives back the oldest team in that conference
 
 }
  console.log(getOldestTeam("Eastern"))
@@ -69,27 +70,16 @@ function getOldestTeam(conference){
 
   } 
   return match;
+//    It takes the team as a parameter and gives back the head coach of that team
   }
-  console.log (getHeadCoach("Atl")); 
+   console.log (getHeadCoach("Atl")); 
 
 
 
-function getOldestTeam(conference){
-    var oldest = 3000;
-    var matches = "that division doesn't exist";
-    for (var i = 0; i < joined.length; i++) {
-        if((teamConference[i].toLowerCase()== conference.toLowerCase() && joined [i] <= oldest)){
-            matches = teamName[i];
-            oldest = joined[i];
-        }
-        
-    }
-    
-   return matches;
     
 
-}
- console.log (getOldestTeam("Eastern"));
+
+  console.log (getOldestTeam("Eastern"));
 
 
 
@@ -124,5 +114,6 @@ function getstadiumCapacity(conference){
       return -1;
     }
     return total; 
+    // // It takes the conference as a parameter and gives back all of the stadium capacity of the conference
   }
-  console.log(getstadiumCapacity("east")); 
+  console.log(getstadiumCapacity("west"));   
