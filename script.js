@@ -116,7 +116,7 @@ function getOldestTeam(conference){
 function getstadiumCapacity(conference){
     var total = 0;
     for(var i = 0; i <stadiumCapacity.length; i++){
-        if(teamConference[i].toLowerCase() == conference.toLowerCase()){
+        if(teamConference[i].toLowerCase().includes(conference.toLowerCase())){
             total += parseFloat(stadiumCapacity[i]);
         }
     }
@@ -125,4 +125,4 @@ function getstadiumCapacity(conference){
     }
     return total; 
   }
-  console.log(getstadiumCapacity("Eastern"));   
+  console.log(getstadiumCapacity("east")); 
