@@ -30,7 +30,11 @@ function getCity(team) {
     
 }
 // console.log (getCity("charlotte FC"))
+<<<<<<< HEAD
 console.log (getTeamsInConference("eastern")) ;
+=======
+// console.log (getTeamsInConference("eastern")) ;
+>>>>>>> fe95df67d708ef585c55b9b46437acd65d61968d
 
 //the next function:
 function getOldestTeam(conference){
@@ -49,6 +53,7 @@ function getOldestTeam(conference){
     
 
 }
+<<<<<<< HEAD
  console.log (getOldestTeam("Eastern"));
 
 
@@ -97,12 +102,25 @@ function getOldestTeam(conference){
 
 
 
+=======
+//  console.log (getOldestTeam("Eastern"));
+>>>>>>> fe95df67d708ef585c55b9b46437acd65d61968d
 
 
 
 
+  function getHeadCoach(team){
+    var match = "That team does not exist";
+    for(var i = 0; i < coachName.length; i++){
+        if(teamName[i].toLowerCase().includes(team.toLowerCase())){
+        match = coachName[i];
 
+    }
 
+  } 
+  return match;
+  }
+//   console.log (getHeadCoach("Atlanta"));
 
 
 
@@ -120,4 +138,4 @@ function getstadiumCapacity(conference){
     }
     return total; 
   }
-  console.log(getstadiumCapacity("Eastern"));   
+  console.log(getstadiumCapacity("eastern"));   
