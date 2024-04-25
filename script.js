@@ -13,6 +13,7 @@ function getTeamsInConference(conference){
     for (var i = 0; i < teamConference.length; i++) {
         if(teamConference[i].toLowerCase().includes(conference.toLowerCase())){
             matches.push(teamName[i]);
+            // It takes the conference as a parameter and gives back the teams in the conference
         }
   
     }
@@ -29,7 +30,7 @@ function getCity(team) {
         if(teamName[i].toLowerCase().includes(team.toLowerCase())){
             matches = teamLocation[i];
         }
-
+// It takes the team as a parameter and gives back the city the team is from
     }
    return matches;
     
@@ -45,6 +46,7 @@ function getOldestTeam(conference){
         if((teamConference[i].toLowerCase()== conference.toLowerCase() && joined [i] <= oldest)){
             matches = teamName[i];
             oldest = joined[i];
+            // It takes the conference as a parameter and gives back the oldest team in that conference
         }
        
     }
@@ -64,7 +66,7 @@ function getHeadCoach(team){
     for(var i = 0; i < coachName.length; i++){
         if(teamName[i].toLowerCase().includes(team.toLowerCase())){
         match = coachName[i];
-
+// It takes the team as a parameter and gives back the head coach of that team
     }
 
   } 
@@ -74,55 +76,22 @@ function getHeadCoach(team){
 
 
 
-// function getOldestTeam(conference){
-//     var oldest = 3000;
-//     var matches = "that division doesn't exist";
-//     for (var i = 0; i < joined.length; i++) {
-//         if((teamConference[i].toLowerCase()== conference.toLowerCase() && joined [i] <= oldest)){
-//             matches = teamName[i];
-//             oldest = joined[i];
-//         }
-        
-//     }
-    
-//    return matches;
-    
-
 // }
 //  console.log (getOldestTeam("e1"));  
  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-// function getstadiumCapacity(conference){
-//     var total = 0;
-//     for(var i = 0; i <stadiumCapacity.length; i++){
-//         if(teamConference[i].toLowerCase().includes(conference.toLowerCase())){
-//             total += parseFloat(stadiumCapacity[i]);
-//         }
-//     }
-//     if(total == 0){
-//       return -1;
-//     }
-//     return total; 
-//   }
-//   console.log(getstadiumCapacity("east")); 
+function getstadiumCapacity(conference){
+    var total = 0;
+    for(var i = 0; i <stadiumCapacity.length; i++){
+        if(teamConference[i].toLowerCase().includes(conference.toLowerCase())){
+            total += parseFloat(stadiumCapacity[i]);
+        }
+    }
+    if(total == 0){
+      return -1;
+    }
+    return total; 
+     // It takes the conference as a parameter and gives back all of the stadium capacity of the conference
+  }
+  }
+  console.log(getstadiumCapacity("east")); 
