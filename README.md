@@ -1,5 +1,5 @@
 # MLS Libary 
-this function uses the Conference to find the teams in the conference, the oldest team in the conference, and the stadium capacity. It also uses the team to find the head coach, and the city of the team.
+this function uses the Conference to find the teams in the conference, the oldest team in the conference, and the stadium capacity. It also uses the team to find the head coach and the city of the team.
 # 
 #### It takes the conference as a parameter and gives back the teams in the conference
 ######  conference {string} - desired team
@@ -18,10 +18,10 @@ this function uses the Conference to find the teams in the conference, the oldes
 #
 #### It takes the team as a parameter and gives back the head coach of that team
 ###### Team {string} - desired head coach
-###### I will return the oldest head coach {string} or "That team does not exist"
+###### It will return the oldest head coach {string} or "That team does not exist"
 ** function getHeadCoach(team) **
 #
-#### It 
-######
-######
-**
+#### It takes the conference as a parameter and gives back all of the stadium capacity of the conference
+###### Conference {string} - desired capacity of stadium's
+###### It will return all of the capacity of the stadium's {number} or "That conference doesn't exist"
+**function getstadiumCapacity(conference)**
