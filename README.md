@@ -1,9 +1,9 @@
 # MLS Libary 
-this function uses the Conference to find the teams in the confrence, the oldest team in the confrence, and the stadium capacity . It also uses the team to find the head coach, the city of the team.
+this function uses the Conference to find the teams in the conference, the oldest team in the conference, and the stadium capacity. It also uses the team to find the head coach, and the city of the team.
 # 
-#### It takes the conference as a parameter and gives back the teams in the confrence
-######  confrence {string} - desired team
-###### it will return the teams in that confrence {string} or "this conference doesn't exist"
+#### It takes the conference as a parameter and gives back the teams in the conference
+######  conference {string} - desired team
+###### it will return the teams in that conference {string} or "this conference doesn't exist"
 ** function getTeamsInConference(conference)**
 #
 #### It takes the team as a parameter and gives back the city the team is from
@@ -11,12 +11,17 @@ this function uses the Conference to find the teams in the confrence, the oldest
 ###### It will return the city the team is from {string} or "that team doesn't exist"
 ** function getCity(team) **
 #
-#### It takes the confrence as a parameter and gives back the oldest team in that conference
-###### Confrence {string} - desired oldest team
-###### It will return the oldest team int he confrence {string} or "that division doesn't exist"
+#### It takes the conference as a parameter and gives back the oldest team in that conference
+###### Conference {string} - desired oldest team
+###### It will return the oldest team in the conference {string} or "that division doesn't exist"
 ** function getOldestTeam(conference) **
 #
-####
-######
-######
+#### It takes the team as a parameter and gives back the head coach of that team
+###### Team {string} - desired head coach
+###### I will return the oldest head coach {string} or "That team does not exist"
 ** function getHeadCoach(team) **
+#
+#### It 
+######
+######
+**
