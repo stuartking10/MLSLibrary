@@ -8,12 +8,13 @@ var teamConference =getColumn (url,7)
 var joined =getColumn (url,5)
 var coachName =getColumn (url,6)
 
+ // NEXT FUNCTION: It takes the conference as a parameter and gives back the teams in the conference
 function getTeamsInConference(conference){
     var matches= [];
     for (var i = 0; i < teamConference.length; i++) {
         if(teamConference[i].toLowerCase().includes(conference.toLowerCase())){
             matches.push(teamName[i]);
-            // It takes the conference as a parameter and gives back the teams in the conference
+           
         }
   
     }
@@ -23,14 +24,14 @@ function getTeamsInConference(conference){
    return matches; 
 }
 // console.log(getTeamsInConference("western"))
-
+// NEXT FUNCTION: It takes the team as a parameter and gives back the city the team is from:
 function getCity(team) {
     var matches ="that team doesn't exist";
     for (var i = 0; i < teamName.length; i++) {
         if(teamName[i].toLowerCase().includes(team.toLowerCase())){
             matches = teamLocation[i];
         }
-// It takes the team as a parameter and gives back the city the team is from
+
     }
    return matches;
     
@@ -38,7 +39,7 @@ function getCity(team) {
 // console.log (getCity("charlotte FC")) 
 // console.log (getTeamsInConference("Eastern")) ;
 
-//the next function:
+//the next function takes the oldest team from a conference and returns the team:
 function getOldestTeam(conference){
     var oldest = 3000;
     var matches = "that division doesn't exist";
@@ -60,13 +61,13 @@ function getOldestTeam(conference){
  console.log(getOldestTeam("Eastern")); 
 
 
-
+//NEXT FUNCTION: It takes the team as a parameter and gives back the head coach of that team
 function getHeadCoach(team){
     var match = "That team does not exist";
     for(var i = 0; i < coachName.length; i++){
         if(teamName[i].toLowerCase().includes(team.toLowerCase())){
         match = coachName[i];
-// It takes the team as a parameter and gives back the head coach of that team
+
     }
 
   } 
@@ -79,6 +80,7 @@ function getHeadCoach(team){
 // }
 //  console.log (getOldestTeam("e1"));  
  
+// NEXT FUNCTION: It takes the conference as a parameter and gives back all of the stadium capacity of the conference
 
 function getstadiumCapacity(conference){
     var total = 0;
@@ -91,7 +93,6 @@ function getstadiumCapacity(conference){
       return -1;
     }
     return total; 
-     // It takes the conference as a parameter and gives back all of the stadium capacity of the conference
   }
-  }
+  
   console.log(getstadiumCapacity("east")); 
